@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+	<title>Drag Drop Example</title>
+	<style>
+		#drop_zone {
+		    border: 2px dashed #bbb;
+		    -moz-border-radius: 5px;
+		    -webkit-border-radius: 5px;
+		    border-radius: 5px;
+		    padding: 25px;
+		    text-align: center;
+		    font: 20pt bold 'Vollkorn';
+		    color: #bbb;
+		}
+	</style>
+	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
+</head>
+<body>
+	<div id="content">
+		
+		<div id="drop_zone">Drop files here</div>
+		<div id="list"></div>
+		
+	</div>
+	
+	<script type='text/javascript'>
+		if (Modernizr.draganddrop) {
+			
+			var output = [];
+			
+			function handleFileSelect(evt){
+				evt.stopPropagation();
+				evt.preventDefault();
+				
+				var files = evt.dataTransfer.files; // FileList object.
+				// files is a FileList of File objects. List some properties.
+				
+				for (var i = 0, f; f = files[i]; i++) {
+					output.push('<li><strong>', f.name, '</strong> (', f.type || 'n/a', ') - ', f.size, ' bytes</li>');
+					console.log(f);
+					
+					if (f.type.match('image.*')) {
+						
+                        var reader = new FileReader();
+                        
+                        // Closure to capture the file information.
+                        reader.onload = (function(theFile){
+                            return function(e){
+                                // Render thumbnail.
+                                var span = document.createElement('span');
+                                span.innerHTML = ['<img class="thumb" src="', e.target.result, '" title="', theFile.name, '"/>'].join('');
+                                document.getElementById('list').insertBefore(span, null);
+                            };
+                        })(f);
+                        
+                        // Read in the image file as a data URL.
+                        reader.readAsDataURL(f);	
+					}
+					
+					
+				}
+				document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
+			}
+			
+			function handleDragOver(evt){
+				evt.stopPropagation();
+				evt.preventDefault();
+			}
+			
+			var dropZone = document.getElementById('drop_zone');
+			dropZone.addEventListener('dragover', handleDragOver, false);
+			dropZone.addEventListener('drop', handleFileSelect, false);
+			
+		}
+	</script>
+</body>
+</html>
