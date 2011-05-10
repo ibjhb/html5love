@@ -24,6 +24,8 @@
 		
 		if (localStorage.getItem('contenteditable')) {
 			$('#editable').html(localStorage.getItem('contenteditable'));
+		} else {
+			// fire the ajax
 		}
 		
 		$('#editable').blur(function(){
