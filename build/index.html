@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+   <title>Vanilla &mdash; Just another html theme</title>
+  <link rel="stylesheet" type="text/css" media="all" href="web/css/reset.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="web/css/vanilla.css" />
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="web/css/ie7.css" /><![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="web/css/ie8.css" /><![endif]-->
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Serif:italic'>
+  
+  <link rel="stylesheet" href="web/css/main.css" type="text/css" media="screen">
+  <script src="web/js/app.js"></script>
+  <script>require('main');</script>
+</head>
+<body>
+<!-- start #header -->
+<div id="header" class="clearfix">
+  <div class="logo"><a href="index.html">HTML5LOVE</a></div>
+  <div class="menu-general-container">
+    <ul id="menu">
+      <li class="current-menu-item"><a href="#home"><span><span>Home</span></span></a></li>
+      <li><a href="#code"><span><span>Code</span></span></a>
+	    <ul class="sub-menu">
+          <li><a href="#"><span><span>Cache</span></span></a></li>
+          <li><a href="#"><span><span>Content Editable</span></span></a></li>
+		  
+        </ul>
+	  </li>
+      <li><a href="http://coldfusioning.com"><span><span>Blog</span></span></a></li>
+      <li><a href="#contact"><span><span>About</span></span></a></li>
+      <li><a href="#contact"><span><span>Contact</span></span></a></li>
+    </ul>
+  </div>
+</div>
+<!-- end #header -->
+
+<!-- start #wrapper -->
+<div id="wrapper">
+  <!-- start #content -->
+  <div id="content" class="clearfix">
+    <!-- content goes here -->
+  </div>
+  <!-- end #content -->
+  <!-- start #footer -->
+  <div id="footer">
+    <p id="twitter">
+      <a href="http://twitter.com/adrianmg"></a>
+      <span>at <span></span></span>
+    </p>
+    <div class="cols clearfix">
+      <div class="col_1">
+        <h4>Recent Posts</h4>
+        <ul>
+          <li><a href='post.html' title='Read more...'>Inspired by… Retro videogames posters-based</a></li>
+          <li><a href='post.html' title='Read more...'>Photoshop, cool image editing for the rest of us</a></li>
+          <li><a href='post.html' title='Read more...'>Here you have another title sample</a></li>
+          <li><a href='post.html' title='Read more...'>Happy Birthday Google Chrome! Two years with us</a></li>          
+          <li><a href='post.html' title='Read more...'>10 awesome concept arts based in videogames</a></li>
+        </ul>
+      </div>
+      <div class="col_2">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="category.html" title="View all posts under category">Articles</a> <i>3 entries</i></li>
+          <li><a href="category.html" title="View all posts under category">Design</a> <i>2 entries</i></li>
+          <li><a href="category.html" title="View all posts under category">Interviews</a> <i>1 entry</i></li>
+          <li><a href="category.html" title="View all posts under category">Tutorials</a> <i>4 entries</i></li>
+          <li><a href="category.html" title="View all posts under category">Miscellaneous</a> <i>0 entries</i></li>
+        </ul>
+      </div>
+      <div class="col_3">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="contact.html" title="Get in touch with us">Get in touch with us</a></li>
+          <li><a href="styles.html" title="Styles showcase!">Styles showcase: show bizniss!</a></li>
+          <li><a href="gallery.html" title="Enjoy our awesome gallery!">Enjoy our awesome gallery!</a></li>
+          <li><a href="gallery.html" title="Need full page?">Need full page? Here you have</a></li>
+          <li><a href="blog.html" title="The Blog">The Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="credits">
+      html5love.com is a project by <a href="http://ibjhb.com">James Brown</a>  You can follow me
+      <a href="http://twitter.com/ibjhb">@ibjhb</a>. All Rights Reserved 2011.
+    </p>
+  </div>
+  <!-- end #footer -->
+</div>
+<!-- end #wrapper --> 
+ 
+<!-- start scripts --> 
+<script type="text/javascript" src="web/js/cufon.js"></script> 
+<script type="text/javascript" src="web/js/bebas_neue_400.font.js"></script> 
+<script type="text/javascript" src="web/js/superfish.js"></script>
+<script type="text/javascript">
+$(function(){
+Cufon.replace('#menu > li > a', {
+    textShadow: '#fff 0 1px 1px',
+    letterSpacing: '0.2px',
+    fontSize: '20px'
+  });
+  Cufon.replace('#footer h4', {
+    textShadow: '#fff 0 1px 1px',
+    letterSpacing: '0.8px'
+  });
+  Cufon.replace('#splash h1', {
+    textShadow: '#d7d7d7 0 2px 1px',
+    letterSpacing: '0.8px'
+  });
+  Cufon.replace('#services h3, #footer h4', {
+    textShadow: '#fff 0 1px 1px',
+    letterSpacing: '0.8px'
+  });
+  Cufon.replace('h2, h3, h4, h5, h6', {
+    letterSpacing: '0.8px',
+    hover: true
+  });
+  //fix IE´s
+  Cufon.now();
+  var twitter = 'ibjhb';
+  if (typeof twitter !== "undefined"){
+    var username = twitter; // set user name
+    var format = 'json'; // set format, you really don't have an option on this one
+    var url = 'http://api.twitter.com/1/statuses/user_timeline/'+username+'.'+format+'?callback=?';     // make the url
+
+    $.getJSON(url,function(tweet){ // get the tweets
+      $("#twitter a").html('"' + tweet[0].text + '"'); // get the first tweet in the response and place it inside the div
+      $("#twitter span span").html(tweet[0].created_at.slice(0, 16)); // get the first tweet in the response and place it inside the div
+    });
+  }
+  
+  $("#menu").superfish({
+    animation: {opacity: 'show',height: 'show'},
+    speed:  400,
+    delay:  100,
+    dropShadows: false,
+    autoArrows: false,
+    disableHI: true
+  });
+  
+});
+</script>
+
+ <!-- end scripts --> 
+</body>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<title>Local Storage Example</title>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
+	
+	<script type='text/javascript'>
+	$(function(){
+		
+		if (!Modernizr.localstorage){
+			$('#content').html('This browser does not support localStorage');
+			return;	
+		}
+			
+		saveData = function(){
+			var myObj = {
+				 one 	: 'yes'
+				,two	: 'no'
+				,three	: 123
+				,four	: false
+			}
+			
+			localStorage.setItem('objStorage', JSON.stringify(myObj));
+		}
+		
+		getData = function(){
+			returnObj = JSON.parse(localStorage.getItem('objStorage'));
+			console.log(returnObj);
+		}
+		
+		removeData = function(){
+			localStorage.removeItem('objStorage');	
+		}
+		
+		$('#content a').click(function(){
+			eval($(this).attr('action'))();
+			return false;
+		})
+		
+		// Could also use sessionStorage instead of localStorage but it won't persist past the browser
+		
+		//localStorage['bar'] = 'foo';
+		//var a = localStorage['bar'];
+		
+	});
+	</script>
+	
+</head>
+<body>
+	<div id="content">
+		
+		<a href="##" action="getData">Get Data</a>
+		<a href="##" action="saveData">Save Data</a>
+		<a href="##" action="removeData">Remove Data</a>
+		
+	</div>
+</body>
+</html>

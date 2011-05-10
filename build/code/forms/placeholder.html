@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+	<title>Form Placeholder Example</title>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
+	
+	<script type='text/javascript'>
+	$(function(){
+		
+		if (!Modernizr.input.placeholder){
+			$('#content').prepend('This browser does not support input.placeholder <br /><br />');
+			//return;	
+		}
+		
+		if (!Modernizr.input.autofocus){
+			$('input[autofocus]').focus();
+		}
+		
+	});
+	</script>
+	<style>
+		#place{
+			font-size: 36px;
+			height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		
+		<form> 
+			<input name="q" autofocus> 
+			<input name="place" id="place" placeholder="Search Bookmarks and History" size='35'> 
+			<input type="submit" value="Search">
+		</form>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+	<title>Local Storage Example</title>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="../js/underscore-min.js"></script>
+	
+	<script type='text/javascript'>
+	$(function(){
+		
+		_.each($('#test').data(), function(name, value){
+			$('#content').append(name + ' ' + value + '<br />');
+		});
+
+	});
+	</script>
+	
+</head>
+<body>
+	<div id="content">
+		
+	    <div id="test" data-james="brown" data-name="testDiv" data-height="short">
+	        This element has data
+	    </div>
+		
+	</div>
+</body>
+</html>

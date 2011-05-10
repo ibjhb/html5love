@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+/*
+Theme Name: vanilla
+Theme URI: http://cokidoo.com
+Description: Coded & designed by <a href="http://twitter.com/adrianmg">Adrian Mato Gondelle</a>.
+Version: 1.0
+Author: Adrián Mato
+Author URI: http://twitter.com/adrianmg
+Tags: clean, vanilla, elegant, corporate
+*/
+
+
+
+/*
+*   Section:      fixes for IE 8
+*   Description:  so sad :(
+*/
+#header #menu a span{
+  padding: 10px 0 5px 11px;
+}
+#header #menu a span span{
+  padding: 10px 11px 5px 0;
+}
