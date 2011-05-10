@@ -14,19 +14,23 @@
 		
 		if (!Modernizr.input.autofocus){
 			$('input[autofocus]').focus();
-			//return;	
 		}
 		
 	});
 	</script>
-	
+	<style>
+		#place{
+			font-size: 36px;
+			height: 50px;
+		}
+	</style>
 </head>
 <body>
 	<div id="content">
 		
 		<form> 
 			<input name="q" autofocus> 
-			<input name="q" placeholder="Search Bookmarks and History" size='35'> 
+			<input name="place" id="place" placeholder="Search Bookmarks and History" size='35'> 
 			<input type="submit" value="Search">
 		</form>
 		
