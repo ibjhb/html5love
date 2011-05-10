@@ -1,0 +1,56 @@
+	<!-- start #splash -->
+    <div id="splash" class="clearfix">
+      <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" />
+    </div>
+    <!-- end #splash -->
+    <!-- start #quote --> 
+    <div id="quote" class="clearfix"> 
+      <p>“I've seen the future - It's in my browser”</p> 
+      <a href="http://dev.w3.org/html5/html-author/">html5 Reference</a> 
+    </div> 
+    <!-- end #quote --> 
+    <!-- start #services --> 
+    <div id="services" class="clearfix"> 
+      <div class="left"> 
+        <div class="first help"> 
+          <h3>Enterprise Quality Support</h3> 
+          <p>Are there many variations of passages of Lorem Ipsum available, but the majority have suffered
+          alteration in some form, by injected humour, or randomised words which don't look even slightly
+          believable. If you are going to passage.</p> 
+        </div> 
+        <div class="upload"> 
+          <h3>Upload System Enhaced</h3> 
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+          galley of type and scrambled.</p> 
+        </div> 
+        <div class="last media"> 
+          <h3>Motion Impression Design</h3> 
+          <p>Are there many variations of passages of Lorem Ipsum available, but the majority have suffered
+          alteration in some form, by injected humour, or randomised words which don't look even slightly
+          believable. If you are going to passage.</p> 
+        </div> 
+      </div> 
+      <div class="right"> 
+        <div class="first storage"> 
+          <h3>Unlimited Premium Storage</h3> 
+          <p>Are there many variations of passages of Lorem Ipsum available, but the majority have suffered
+          alteration in some form, by injected humour, or randomised words which don't look even slightly
+          believable. If you are going to passage.</p> 
+        </div> 
+        <div class="time"> 
+          <h3>Solid And Faster Framework</h3> 
+          <p>Just many variations of passages of Lorem Ipsum available, but the majority have suffered
+          alteration in some form, by injected humour, or randomised words which don't look even slightly
+          believable.</p> 
+        </div> 
+        <div class="last stats"> 
+          <h3>Maximize Your Profit</h3> 
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+          alteration in some form, by injected humour, or randomised words which don't look even slightly
+          believable. If you are going to passage.</p> 
+        </div> 
+      </div> 
+    </div> 
+    <!-- end #services -->
+<!-- END you can remove this -->
