@@ -9,7 +9,8 @@
   <link rel="stylesheet" type="text/css" media="all" href="web/css/vanilla.css" />
   <!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="web/css/ie7.css" /><![endif]-->
   <!--[if IE 8]><link rel="stylesheet" type="text/css" media="all" href="web/css/ie8.css" /><![endif]-->
-  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Serif:italic'>
+  <!-- <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Serif:italic'> -->
+  <link rel='stylesheet' type='text/css' href='web/css/droid_serif.css'>
   
   <link rel="stylesheet" href="web/css/main.css" type="text/css" media="screen">
   <script src="web/js/app.js"></script>
@@ -21,11 +22,11 @@
   <div class="logo"><a href="index.html">HTML5LOVE</a></div>
   <div class="menu-general-container">
     <ul id="menu">
-      <li class="current-menu-item"><a href="#home" class="home"><span><span>Home</span></span></a></li>
-      <li><a href="#code" class="code"><span><span>Code</span></span></a>
+      <li class="current-menu-item"><a href="#!/home" class="home"><span><span>Home</span></span></a></li>
+      <li><a href="#!/code" class="code"><span><span>Code</span></span></a>
 	    <ul class="sub-menu">
           <li><a href="#"><span><span>Cache</span></span></a></li>
-          <li><a href="#"><span><span>Content Editable</span></span></a></li>
+          <li><a href="#!/contenteditable"><span><span>Content Editable</span></span></a></li>
 		  <li><a href="#"><span><span>Dataset</span></span></a></li>
 		  <li><a href="#"><span><span>Drag Drop</span></span></a></li>
 		  <li><a href="#"><span><span>Forms</span></span></a></li>
@@ -55,7 +56,7 @@
   <!-- start #footer -->
   <div id="footer">
     <p id="twitter">
-      <a href="http://twitter.com/adrianmg"></a>
+      <a href="http://twitter.com/ibjhb"></a>
       <span>at <span></span></span>
     </p>
     <div class="cols clearfix">
@@ -103,54 +104,7 @@
 <script type="text/javascript" src="web/js/cufon.js"></script> 
 <script type="text/javascript" src="web/js/bebas_neue_400.font.js"></script> 
 <script type="text/javascript" src="web/js/superfish.js"></script>
-<script type="text/javascript">
-$(function(){
-Cufon.replace('#menu > li > a', {
-    textShadow: '#fff 0 1px 1px',
-    letterSpacing: '0.2px',
-    fontSize: '20px'
-  });
-  Cufon.replace('#footer h4', {
-    textShadow: '#fff 0 1px 1px',
-    letterSpacing: '0.8px'
-  });
-  Cufon.replace('#splash h1', {
-    textShadow: '#d7d7d7 0 2px 1px',
-    letterSpacing: '0.8px'
-  });
-  Cufon.replace('#services h3, #footer h4', {
-    textShadow: '#fff 0 1px 1px',
-    letterSpacing: '0.8px'
-  });
-  Cufon.replace('h2, h3, h4, h5, h6', {
-    letterSpacing: '0.8px',
-    hover: true
-  });
-  //fix IE´s
-  Cufon.now();
-  var twitter = 'ibjhb';
-  if (typeof twitter !== "undefined"){
-    var username = twitter; // set user name
-    var format = 'json'; // set format, you really don't have an option on this one
-    var url = 'http://api.twitter.com/1/statuses/user_timeline/'+username+'.'+format+'?callback=?';     // make the url
-
-    $.getJSON(url,function(tweet){ // get the tweets
-      $("#twitter a").html('"' + tweet[0].text + '"'); // get the first tweet in the response and place it inside the div
-      $("#twitter span span").html(tweet[0].created_at.slice(0, 16)); // get the first tweet in the response and place it inside the div
-    });
-  }
-  
-  $("#menu").superfish({
-    animation: {opacity: 'show',height: 'show'},
-    speed:  400,
-    delay:  100,
-    dropShadows: false,
-    autoArrows: false,
-    disableHI: true
-  });
-  
-});
-</script>
+<script type="text/javascript" src="web/js/home.js"></script>
 
  <!-- end scripts --> 
 </body>
