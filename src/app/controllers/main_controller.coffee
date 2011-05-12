@@ -10,7 +10,6 @@ class exports.MainController extends Backbone.Controller
     $('#content').html app.views.home.render().el
 
   showPage: (route) ->
-    console.log route
     $('#content').html app.views.viewHandler.render(route).el
     Cufon.refresh()
   
