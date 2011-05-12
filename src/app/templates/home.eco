@@ -1,6 +1,6 @@
 	<!-- start #splash -->
     <div id="splash" class="clearfix">
-      <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" />
+      <img src="web/img/html5love_logo.png" width="434" height="739" />
     </div>
     <!-- end #splash -->
     <!-- start #quote --> 
