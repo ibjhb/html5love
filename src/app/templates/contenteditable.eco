@@ -1,0 +1,21 @@
+<div id="splash" class="section">
+	<h1>Content Editable</h1>
+	<span>Making content changes easy!</span>
+</div>
+<div id="main" class="full page clearfix">
+	
+	<h2>Testing html on a code page</h2>
+	
+	<div class="one_half">
+		<h3>Test left</h3>
+		<span class="dropcap">T</span>his is a test
+	</div>
+	<div class="one_half last">
+		test right
+	</div>
+	<div class="divider top"><a href="#">Top</a></div>
+	<br /><br /><br /><br />
+	<br /><br /><br /><br />
+	<br /><br /><br /><br />
+	<div class="clearboth"></div>
+</div>
