@@ -13,8 +13,9 @@ class exports.MainController extends Backbone.Controller
     $('#content').html app.views.viewHandler.render(route).el
     Cufon.refresh()
   
-  updateMenu: (route) ->
+  updateMenu: (route, page) ->
     $menu = $('#menu li')
     $menu.removeClass 'current-menu-item'
-    $menu.find('.' + route.split(':')[1]).parent().addClass 'current-menu-item'
+    findclass = if _.isUndefined(page) then route.split(':')[1] else page
+    $menu.find('.' + findclass).parent().addClass 'current-menu-item'
 	@ 

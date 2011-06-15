@@ -16,7 +16,7 @@ $(function(){
         textShadow: '#fff 0 1px 1px',
         letterSpacing: '0.8px'
     });
-    Cufon.replace('h2, h3, h4, h5, h6', {
+    Cufon.replace('h2:not([class="nocufon"]), h3, h4, h5, h6', {
         letterSpacing: '0.8px',
         hover: true
     });

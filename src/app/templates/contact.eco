@@ -1,0 +1,32 @@
+<div id="splash" class="section">
+	<h1>Contact Me</h1>
+	<span>Get in touch</span>
+</div>
+<div id="main" class="full page clearfix">
+	
+	<h2>Hello World</h2>
+	
+	<div>
+		<p>
+		<span class="dropcap">I</span>if you have any qeustions, concerns, fixes or just want to say 'What up?', please 
+		feel free to contact me any of the ways below:
+		</p>
+		
+		<p>
+			<ul>
+				<li>
+					<strong>Email:</strong> James at gulftobaytech.com
+				</li>
+				<li>
+					<strong>Twitter:</strong> <a href="http://twitter.com/ibjhb/">@ibjhb</a>
+				</li>
+				<li>
+					<strong>Blog:</strong> <a href="http://coldfusioning.com/">ColdFusioning.com</a>
+				</li>
+			</ul>
+		</p>
+	</div>
+	<div class="divider top"><a href="#">Top</a></div>
+
+	<div class="clearboth"></div>
+</div>
