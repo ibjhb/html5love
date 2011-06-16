@@ -19,6 +19,11 @@
 			&nbsp;<span>„</span></p></blockquote>
 		</p>
 		
+		<p>
+			Check out the <a href="./code/modernizr/modernizr.html">example</a> for a list of
+			what your browser supports or head over to <a href="http://www.modernizr.com/">Modernizr</a>
+			for feature detection goodness. 
+		</p>
 		
 		
 	</div>
