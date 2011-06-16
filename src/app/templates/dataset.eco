@@ -10,7 +10,7 @@
 		<h3>Data, Data Everywhere</h3>
 		<p>
 			<span class="dropcap">D</span>evelopers are resourceful but sometimes lazy.  Whether lazy or lack of a better
-			method, the class and rel attributes have been long used to store data and the state of elemnts and objects.
+			method, the class and rel attributes have been long used to store data and the state of elements and objects.
 			Well, no more.  Immediately start using a JavaScript framework, like <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>
 			or, if you can't, the 'data-' attribute.
 		

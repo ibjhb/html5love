@@ -9,7 +9,7 @@
 	<div class="three_fourth">
 		<p>
 			<span class="dropcap">W</span>ith localstorage we can now save data, objects, JSON, html,
-			etc.  The one thing to remember, everything must stored as a string.  Not to worry, you can use
+			etc.  The one thing to remember, everything must be stored as a string.  Not to worry, you can use
 			<code>JSON.stringify()</code> to make this happen.
 		</p>
 	</div>

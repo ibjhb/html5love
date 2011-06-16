@@ -13,7 +13,7 @@
 		Central Florida Web Developers Group.  I built the examples to demo the different features of HTML5.  I have
 		since given the presentation numerous times.  At the time, I threw the code up onto Github but I also put the
 		code onto my production server and turned on directory browsing.  It allowed for a way to share the code but didn't 
-		provide any explination or further information.  I decided it was time to give it a proper layout and write
+		provide any explanation or further information.  I decided it was time to give it a proper layout and write
 		verbiage for each of the examples.  All of the examples and code are released on Github.  Additionally,
 		all of the code to build this site is published.  Please send a pull request if you find anything that needs
 		fixing or if you want to add any samples to the site.
