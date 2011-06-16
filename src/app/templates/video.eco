@@ -4,25 +4,43 @@
 </div>
 <div id="main" class="full page clearfix">
 	
-	<h2>Content Editable Lets You Make Elements Editable</h2>
+	<h2>HTML5 Is So Much More Than The Video Tag</h2>
 	
 	<div class="one_half">
-		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		
+		<p>
+			<span class="dropcap">E</span>verybody seems to have a <code>&lt;video></code> example
+			these days.  I don't think we'd hear about anything else if it wasn't for 
+			
+			<a href="http://html5rocks.com/">some</a>
+			<a href="http://diveintohtml5.org/">awesome</a>
+			<a href="http://html5demos.com/">great</a>
+			<a href="http://html5gallery.com/">wonderful</a>
+			<a href="http://html5.org/">amazing</a>
+			<a href="http://www.html5r0cks.com/">websites</a>
+			
+			teaching people the ways of HTML5.
+			
+		</p>
+		
+		<p>
+			But alas, we do have the <code>&lt;video></code> tag and it can be a good tool, used the right way.
+			If you want to read in great detail about the tag, head over to
+			<a href="http://diveintohtml5.org/video.html">Dive Into HTML5</a> for amazing detail.  Also,
+			there is a full API that lets you programmatically control the player, which is nice.
+		</p>
 	</div>
 	<div class="one_half last">
-		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<h2>Minimal Setup</h2>
+		<code class="code">&lt;video controls="true" src="bunny.mp4">&lt;/video></code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
+	
+		
+	
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
+		<h1><a href="./code/video/video.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
 
