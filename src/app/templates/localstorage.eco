@@ -4,19 +4,32 @@
 </div>
 <div id="main" class="full page clearfix">
 	
-	<h2>Content Editable Lets You Make Elements Editable</h2>
+	<h2>We can now persist data on the client</h2>
 	
+	<div class="three_fourth">
+		<span class="dropcap">W</span>ith localstorage we can now save data, objects, JSON, html,
+		etc.  The one thing to remember, everything must stored as a string.  Not to worry, you can use
+		<code>JSON.stringify()</code> to make this happen.
+	</div>
+	<div class="divider top"><a href="#">Top</a></div>
 	<div class="one_half">
-		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		<h2>Set:</h2>
+		<code class="code">var myObj = {
+		one 	: 'yes'
+		,two	: 'no'
+		,three	: 123
+		,four	: false
+		},			
+		stringObj = JSON.stringify(myObj); 
+		
+localStorage.setItem('objStorage', stringObj);
+		</code>
 	</div>
 	<div class="one_half last">
-		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<h2>Get:</h2>
+		<code class="code">
+		var myObj = returnObj = JSON.parse(localStorage.getItem('objStorage'));
+		</code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
