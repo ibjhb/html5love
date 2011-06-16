@@ -1,31 +1,42 @@
 <div id="splash" class="section">
 	<h1>Dataset</h1>
-	<span>Storing Data The Right Way</span>
+	<span>(Sometimes) Storing Data The Right Way</span>
 </div>
 <div id="main" class="full page clearfix">
 	
-	<h2>Content Editable Lets You Make Elements Editable</h2>
+	<h2>STOP using class names or rel</h2>
 	
 	<div class="one_half">
-		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		<h3>Data, Data Everywhere</h3>
+		<span class="dropcap">D</span>evelopers are resourceful but sometimes lazy.  Whether lazy or lack of a better
+		method, the class and rel attributes have been long used to store data and the state of elemnts and objects.
+		Well, no more.  Immediately start using a JavaScript framework, like <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>
+		or, if you can't, the 'data-' attribute.
+		
+		<br /><br />
+		
+		In our short example to the right, <code>$('#content').data('name');</code> would return <code>james</code>.
+		
+		<br /><br />
+		
+		View the example below for a more detailed example.
 	</div>
 	<div class="one_half last">
-		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<code class="code">&lt;script type='text/javascript'>
+$(function(){
+$('#content').data('name');
+});
+&lt;/script>
+
+&lt;div data-name="james">&lt;/div></code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
+	
 	<div id="splash" class="section">
 		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
-
 
 	<div class="clearboth"></div>
 </div>
