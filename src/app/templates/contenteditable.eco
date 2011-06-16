@@ -16,7 +16,7 @@
 	</div>
 	<div class="one_half last">
 		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
