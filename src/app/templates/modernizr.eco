@@ -4,25 +4,45 @@
 </div>
 <div id="main" class="full page clearfix">
 	
-	<h2>Content Editable Lets You Make Elements Editable</h2>
+	<h2>Modernizr Is Great - Use It</h2>
 	
 	<div class="one_half">
-		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		<h3>Stop User Agent Sniffing</h3>
+		<p>
+			<span class="dropcap">W</span>hat is Modernizr?  Simply, it will programatically tell you if the current
+			browser natively supports a feature or not.  With that information, you can either conditionally run code or, 
+			even better, use a conditional loader like <a href="http://yepnopejs.com/">yepnope</a>.  What's even better
+			is that yepnope is now <a href="http://www.modernizr.com/docs/#load">integrated into Modernizr</a>!
+			
+			<blockquote class=""><p><span>“</span> 
+			Why couldn't we have had Modernizr years ago?!?
+			&nbsp;<span>„</span></p></blockquote>
+		</p>
+		
+		
+		
 	</div>
 	<div class="one_half last">
-		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<h2>Best!</h2>
+		<code class="code">Modernizr.load({
+  test: Modernizr.geolocation,
+  yep : 'geo.js',
+  nope: 'geo-polyfill.js'
+});</code>
+
+		<h2>Works</h2>
+
+		<code class="code">if (!Modernizr.geolocation){
+	$('#content').html('No geolocation support');
+} else {
+	navigator.geolocation.getCurrentPosition();
+}</code>
+		
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
+		<h1><a href="./code/modernizr/modernizr.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
 

@@ -8,8 +8,20 @@
 	<script type='text/javascript'>
 	$(function(){
 		
-		console.log(Modernizr);
+		// Is jQuery.each fastest?
+		// http://jsperf.com/jquery-vs-underscore-each/2
+		var $content = $('#content');
+		$.each(Modernizr, function(property, value) {
+		        $('<div/>', {
+		                 id: property
+		                ,css: {
+		                        width   : '100%'
+		                }
+		                ,html: property + ' ' + value
+		        }).appendTo($content);
+		});
 		
+
 		/*
 		 yepnope([
 			  {
