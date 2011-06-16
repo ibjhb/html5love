@@ -20,7 +20,6 @@
 			<a href="http://www.html5r0cks.com/">websites</a>
 			
 			teaching people the ways of HTML5.
-			
 		</p>
 		
 		<p>
@@ -35,9 +34,6 @@
 		<code class="code">&lt;video controls="true" src="bunny.mp4">&lt;/video></code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
-	
-	
-		
 	
 	<div id="splash" class="section">
 		<h1><a href="./code/video/video.html">View Example</a></h1>

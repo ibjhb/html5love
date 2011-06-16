@@ -8,18 +8,21 @@
 	
 	<div class="one_half">
 		<h3>Data, Data Everywhere</h3>
-		<span class="dropcap">D</span>evelopers are resourceful but sometimes lazy.  Whether lazy or lack of a better
-		method, the class and rel attributes have been long used to store data and the state of elemnts and objects.
-		Well, no more.  Immediately start using a JavaScript framework, like <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>
-		or, if you can't, the 'data-' attribute.
+		<p>
+			<span class="dropcap">D</span>evelopers are resourceful but sometimes lazy.  Whether lazy or lack of a better
+			method, the class and rel attributes have been long used to store data and the state of elemnts and objects.
+			Well, no more.  Immediately start using a JavaScript framework, like <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>
+			or, if you can't, the 'data-' attribute.
 		
-		<br /><br />
+		</p>
 		
-		In our short example to the right, <code>$('#content').data('name');</code> would return <code>james</code>.
+		<p>
+			In our short example to the right, <code>$('#content').data('name');</code> would return <code>james</code>.
+		</p>
 		
-		<br /><br />
-		
-		View the example below for a more detailed example.
+		<p>
+			View the example below for a more detailed example.
+		</p>
 	</div>
 	<div class="one_half last">
 		<code class="code">&lt;script type='text/javascript'>
@@ -32,9 +35,8 @@ $('#content').data('name');
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
+		<h1><a href="./code/dataset/dataset.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
 

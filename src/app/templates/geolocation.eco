@@ -44,7 +44,6 @@ navigator.geolocation.getCurrentPosition(success);</code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	
 	<div id="splash" class="section">
 		<h1><a href="./code/geolocation/geolocation.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>

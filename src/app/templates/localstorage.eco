@@ -7,9 +7,11 @@
 	<h2>We can now persist data on the client</h2>
 	
 	<div class="three_fourth">
-		<span class="dropcap">W</span>ith localstorage we can now save data, objects, JSON, html,
-		etc.  The one thing to remember, everything must stored as a string.  Not to worry, you can use
-		<code>JSON.stringify()</code> to make this happen.
+		<p>
+			<span class="dropcap">W</span>ith localstorage we can now save data, objects, JSON, html,
+			etc.  The one thing to remember, everything must stored as a string.  Not to worry, you can use
+			<code>JSON.stringify()</code> to make this happen.
+		</p>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	<div class="one_half">
@@ -33,12 +35,10 @@ localStorage.setItem('objStorage', stringObj);
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
+		<h1><a href="./code/localstorage/localstorage.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
-
 
 	<div class="clearboth"></div>
 </div>

@@ -8,18 +8,20 @@
 	
 	<div class="one_half">
 		<h3>Look, no jQuery</h3>
-		<span class="dropcap">A</span>lthough jQuery is wonderful, if the browser supports it natively, why not use it? 
-		There are <a href="http://html5demos.com/drag">many</a> 
-		<a href="http://www.html5rocks.com/en/tutorials/dnd/basics/">great</a>
-		<a href="http://html5demos.com/drag-anything">examples</a> of
-		drag and drop, so this one is a little different.
-		<br /><br />
-		This example probably has the largest amount of code in all the examples.  In short, we're adding a 'drop' listener to our div
-		and if it's an image, display it on the page.  The image doesn't actually upload to the server (but it could).  There are 
-		a large number of applications that you could use this functionality in today.  Of course, make sure you use Modernizr to
-		detect if drag and drop is supported.  If it isn't either notify the user or better yet, provide them with alternative 
-		or gracefully degraded functionality.
-
+		<p>
+			<span class="dropcap">A</span>lthough jQuery is wonderful, if the browser supports it natively, why not use it? 
+			There are <a href="http://html5demos.com/drag">many</a> 
+			<a href="http://www.html5rocks.com/en/tutorials/dnd/basics/">great</a>
+			<a href="http://html5demos.com/drag-anything">examples</a> of
+			drag and drop, so this one is a little different.
+		</p>
+		<p>
+			This example probably has the largest amount of code in all the examples.  In short, we're adding a 'drop' listener to our div
+			and if it's an image, display it on the page.  The image doesn't actually upload to the server (but it could).  There are 
+			a large number of applications that you could use this functionality in today.  Of course, make sure you use Modernizr to
+			detect if drag and drop is supported.  If it isn't either notify the user or better yet, provide them with alternative 
+			or gracefully degraded functionality.
+		</p>
 	</div>
 	<div class="one_half last">
 		<h2>Look for this code, around line 44:</h2>
@@ -27,12 +29,10 @@
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
+		<h1><a href="./code/dragdrop/dragdrop.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
-
 
 	<div class="clearboth"></div>
 </div>

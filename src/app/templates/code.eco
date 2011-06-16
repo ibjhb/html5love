@@ -9,23 +9,28 @@
 	<div class="one_half">
 		<h3>Code Everywhere</h3>
 		<p>
-		<span class="dropcap">T</span>his site is jam-packed with TONS of code.  I love HTML5 and think you should too.
-		All of the examples on this site can be used today.  If you are going to use these examples in production code,
-		you will need to run a conditional on the feature's support in the browser.  On this site, I use Modernizr in the
-		examples with simple if statements.  Another great program that works with Modernizr to conditionally load
-		scripts is YepNope.
+			<span class="dropcap">T</span>his site is jam-packed with TONS of code.  I love HTML5 and think you should too.
+			All of the examples on this site can be used today.  If you are going to use these examples in production code,
+			you will need to run a conditional on the feature's support in the browser.  On this site, I use Modernizr in the
+			examples with simple if statements.  Another great program that works with Modernizr to conditionally load
+			scripts is YepNope.
 		</p>
+		
 		<p>
-		<span class="dropcap">A</span>ll of the code examples from this site are on Github.  Additionally, html5love.com
-		itself has all of it's code posted in its own repository.  If you happen to find a bug, would like to clarify
-		some of the verbiage or even add an HTML5 example I don't have, please feel free to fork the repo, make your
-		changes and send a pull request.  Changes are, we'll add it to the site and give you attribution for your changes.
+			<span class="dropcap">A</span>ll of the code examples from this site are on Github.  Additionally, html5love.com
+			itself has all of it's code posted in its own repository.  If you happen to find a bug, would like to clarify
+			some of the verbiage or even add an HTML5 example I don't have, please feel free to fork the repo, make your
+			changes and send a pull request.  Changes are, we'll add it to the site and give you attribution for your changes.
 		</p>
 		
 		
 	</div>
 	<div class="one_half last">
-		test right
+		<h2>Please Fork Me</h2>
+		<p>
+			Please, if you would like to add/edit/fix/change anything, please <a href="http://github.com/ibjhb/html5love">fork the repo</a> and send me a
+			pull request.  Changes are, I'll accept it and publish it.  If you have any questions, please feel free to <a href="#!/contact/">contact me</a>.
+		</p>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 

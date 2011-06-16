@@ -8,11 +8,13 @@
 	
 	<div class="one_half">
 		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		<p>
+			<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
+			is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
+			we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
+			combine localStorage to save the selection onBlur and populate from localStorage when the page 
+			is loaded.
+		</p>
 	</div>
 	<div class="one_half last">
 		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
@@ -20,12 +22,10 @@
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
 	<div id="splash" class="section">
 		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
-
 
 	<div class="clearboth"></div>
 </div>
