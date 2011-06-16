@@ -9,56 +9,47 @@
 	<script type='text/javascript'>
 	$(function(){
 			
+		var success = function(position){
+		
+			$.each(position.coords, function(i){
+				console.log(position.coords[i]);
+			})
+			
+			
+			$('#status').html('Found you!').addClass('success');
+			
+			$('<div/>', {
+				 id: 'mapcanvas'
+				,css: {
+					height	: '400px'
+					,width	: '560px'
+				}
+				,click: function(){
+					//$(this).remove();
+				}
+			}).appendTo('#content');
+	  
+			var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	        var myOptions = {
+	            zoom: 15,
+	            center: latlng,
+	            mapTypeControl: false,
+	            navigationControlOptions: {
+	                style: google.maps.NavigationControlStyle.SMALL
+	            },
+	            mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        var map = new google.maps.Map($('#mapcanvas')[0], myOptions);
+	        
+	        var marker = new google.maps.Marker({
+	            position: latlng,
+	            map: map,
+	            title: "You are here!"
+	        });
+		},
 		error = function(message){
 			message = typeof message == 'string' ? message : "failed";
 			$('#status').html(message).addClass('error');
-		}
-		
-		success = function(position){
-		
-		$.each(position.coords, function(i){
-			//console.log(position.coords[i]);
-		})
-		
-		
-		$('#status').html('Found you!').addClass('success');
-		
-		/* Old Way!
-		$('<div>').attr('id', 'mapcanvas').css({
-			 height	: '400px'
-			,width	: '560px'
-		}).appendTo('#content');
-		*/
-		$('<div/>', {
-			 id: 'mapcanvas'
-			,css: {
-				height	: '400px'
-				,width	: '560px'
-			}
-			,click: function(){
-				//$(this).remove();
-			}
-		}).appendTo('#content');
-  
-		var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        var myOptions = {
-            zoom: 15,
-            center: latlng,
-            mapTypeControl: false,
-            navigationControlOptions: {
-                style: google.maps.NavigationControlStyle.SMALL
-            },
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map($('#mapcanvas')[0], myOptions);
-        
-        var marker = new google.maps.Marker({
-            position: latlng,
-            map: map,
-            title: "You are here!"
-        });
-			
-			
 		}
 		
 		

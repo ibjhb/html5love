@@ -4,28 +4,51 @@
 </div>
 <div id="main" class="full page clearfix">
 	
-	<h2>Content Editable Lets You Make Elements Editable</h2>
+	<h2>Geolocation Lets You Find Your Place In This World</h2>
 	
 	<div class="one_half">
-		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		<h3>Where You At?</h3>
+		<p>
+			<span class="dropcap">L</span>et me start out by saying that this is not
+			anywhere close to a comprehensive guide to using geolocation.  It is an example.  If you would like
+			a great article on the ins and outs, head over to 
+			<a href="http://diveintohtml5.org/geolocation.html">Dive Into HTML5</a>.
+		</p>
+		<p>
+			Now that your expecatations are lowered, it is a 
+			<a href="./code/geolocation/geolocation.html">cool geolocation example</a>.  Check it out.
+		</p>
+		
+		<p>
+			Our example is compromised of a few parts.  We first setup our <code>success</code> and <code>error</code> 
+			callback functions.  The success function largely is for building the Google Map.  
+			Inspect the postion.coords object that is returned to the success function for more details on what 
+			is provided.  The error function is for, well, handling errors.  The most typical error is that a user
+			doesn't give you permission to use their location.
+		</p>
+		
+		<p>
+			Lastly, we actually call the <code>navigator.geolocation.getCurrentPosition(success, error);</code>
+			function, passing the <code>success</code> and <code>error</code> functions.
+		</p>
+		
 	</div>
 	<div class="one_half last">
-		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<h3>Run in Firebug</h3>
+		<code class="code">var success = function(position){
+	$.each(position.coords, function(i){
+		console.log(position.coords[i]);
+	});
+};
+navigator.geolocation.getCurrentPosition(success);</code>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
-	<br /><br />
+	
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
+		<h1><a href="./code/geolocation/geolocation.html">View Example</a></h1>
 		<span><a href="">View on Github</a></span>
 	</div>
-
 
 	<div class="clearboth"></div>
 </div>
