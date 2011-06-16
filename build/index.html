@@ -12,9 +12,38 @@
   <link rel='stylesheet' type='text/css' href='web/css/droid_serif.css'>
   
   <link rel="stylesheet" href="web/css/main.css" type="text/css" media="screen">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script src="web/js/app.js"></script>
   <script>require('main');</script>
-</head>
+  
+<script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("http://feeds2.feedburner.com/Coldfusioning");
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var li = document.createElement("li");
+			var a = document.createElement("a");
+			
+			a.innerHTML = entry.title;
+			a.setAttribute('href', entry.link);
+			
+			li.appendChild(a);
+			container.appendChild(li);
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+  
+
 <body>
 <!-- start #header -->
 <div id="header" class="clearfix">
@@ -52,7 +81,7 @@
     <!-- content goes here -->
   </div>
   <!-- end #content -->
-  <!-- start #footer -->
+    <!-- start #footer -->
   <div id="footer">
     <p id="twitter">
       <a href="http://twitter.com/ibjhb"></a>
@@ -61,13 +90,7 @@
     <div class="cols clearfix">
       <div class="col_1">
         <h4>Recent Posts</h4>
-        <ul>
-          <li><a href='post.html' title='Read more...'>Inspired by… Retro videogames posters-based</a></li>
-          <li><a href='post.html' title='Read more...'>Photoshop, cool image editing for the rest of us</a></li>
-          <li><a href='post.html' title='Read more...'>Here you have another title sample</a></li>
-          <li><a href='post.html' title='Read more...'>Happy Birthday Google Chrome! Two years with us</a></li>          
-          <li><a href='post.html' title='Read more...'>10 awesome concept arts based in videogames</a></li>
-        </ul>
+        <ul id="feed"></ul>
       </div>
       <div class="col_2">
         <h4>Categories</h4>
@@ -90,6 +113,13 @@
         </ul>
       </div>
     </div>
+	
+	<div id="badge">
+  	 <a href="http://www.w3.org/html/logo/">
+	  <img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-device-graphics-multimedia-performance-semantics-storage.png" width="357" height="64" alt="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with Connectivity / Realtime, CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Multimedia, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
+	 </a>
+    </div>
+	
     <p class="credits">
       html5love.com is a project by <a href="http://ibjhb.com">James Brown</a>  You can follow me
       <a href="http://twitter.com/ibjhb">@ibjhb</a>. All Rights Reserved 2011.
