@@ -4,26 +4,102 @@
 </div>
 <div id="main" class="full page clearfix">
 	
-	<h2>Content Editable Lets You Make Elements Editable</h2>
+	<h2>We get two examples, yay!</h2>
 	
 	<div class="one_half">
-		<h3>Easy Edits</h3>
-		<span class="dropcap">M</span>aking elements editable is very easy.  All that is needed
-		is to add the '<code>contenteditable="true"</code>' to the element, and you can edit it.  In our example,
-		we bind it to the 'section' tag but you can assign it to any element.  For ths example, we also
-		combine localStorage to save the selection onBlur and populate from localStorage when the page 
-		is loaded.
+		<h3>Example 1</h3>
+		<p>
+			<span class="dropcap">O</span>ur first example doesn't require any JavaScript, except to support
+			backwards functionality.  Let's pretend the <code>&lt;script></code> tags weren't there (or you can
+			delete them if you don't believe me and are using Chrome/FireFox 4).  <strong>We have two new attributes available, 
+			<code>autofocus</code> and <code>placeholder</code></strong>.
+		</p>
+				
+		<p>
+			With <code>autofocus</code>, we can tell the 
+			browser to automatically focus on that element.  No JavaScript.  No jQuery.  
+		</p>
+		
+		<p>
+			With <code>placeholder</code>, we can have the browser place a default value into an input.  When
+			the user clicks into the input, the text is removed.  If the user clicks anywhere else without typing,
+			the placeholder text is replaced into the input.  If they type anything and click out, their text stays. 
+			Lastly, if you <a href="/code/forms/placeholder.html">check out the example</a>, you can style the input box.
+		</p>
+		
 	</div>
 	<div class="one_half last">
-		<h2 class="nocufon" contenteditable="true">This text is editable</h2>
-		<code class="code">&lt;h2 contenteditable="true"&gt;This text is editable&lt;/h2&gt;</pre></code>
+		<h2>autofocus</h2>
+		<code class="code">&lt;input name="q" autofocus></code>
+		
+		<h2>placeholder</h2>
+		<code class="code">&lt;input name="place" id="place" placeholder="Search Bookmarks and History" size='35'></code>
+		
+		
+		<div class="box_info">
+				<strong>Note:</strong> <code>placeholder</code> is not recognized by Firefox 3.x.  It doesn't throw an error
+				and it doesn't display the default text.  If you still want to provide the functionality, use 
+				<a href="http://www.modernizr.com/">Modernizr</a> and <a href="http://yepnopejs.com/">yepnope</a>. 
+		</div>
 	</div>
 	<div class="divider top"><a href="#">Top</a></div>
 	
+	
+	
+	<div class="one_half">
+		<h3>Example 2 - Chrome Only But Very Cool!</h3>
+		<p>
+			<span class="dropcap">I</span> almost didn't include this example because it is Chrome only but it is cool and
+			degrades gracefully without JavaScript.  
+		</p>
+		
+		<p>
+			The <code>number</code> type lets us create an input field with up/down buttons to let the user select
+			a number easily without having to type one in.  Cool. 
+		</p>
+		
+		<p>
+			Finally <code>range</code> gives us a nice slider to let the user select a number from a range.  You don't
+			even have to output the number to the screen, if you don't want to. 
+		</p>
+				
+				
+	</div>
+	<div class="one_half last">
+		<h2>number</h2>
+		<code class="code">&lt;input type="number" min="0" max="10" step="2" value="6"></code>
+		
+		<h2>range</h2>
+		<code class="code">&lt;input type="range" min="0" max="10" step="2" value="6"></code>
+		
+		
+		<div class="box_info">
+				<strong>Note:</strong> <code>placeholder</code> is not recognized by Firefox (yet?).  It doesn't throw an error, but
+				it does display the <code>value</code>. 
+		</div>
+	</div>
+	<div class="divider top"><a href="#">Top</a></div>
+	
+	
+	<div class="clearboth"></div>
+	
+	<div class="box_note">
+		These are only a couple of the MANY improvements to forms.  You can find a good listing on 
+		<a href="http://net.tutsplus.com/tutorials/html-css-techniques/rethinking-forms-in-html5/">Rethinking Forms in HTML5</a>
+	</div>
+	
+	
 	<br /><br />
 	<div id="splash" class="section">
-		<h1><a href="./code/contenteditable/contenteditable.html">View Example</a></h1>
-		<span><a href="">View on Github</a></span>
+		<div class="one_half">
+			<h1><a href="./code/forms/placeholder.html">View Placeholder Example</a></h1>
+			<span><a href="">View on Github</a></span>
+		</div>
+		<div class="one_half last">
+			<h1><a href="./code/forms/placeholder.html">View Types Example</a></h1>
+			<span><a href="">View on Github</a></span>
+		</div>
+		
 	</div>
 
 
