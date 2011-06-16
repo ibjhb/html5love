@@ -9,7 +9,7 @@
       <a href="http://dev.w3.org/html5/html-author/">html5 Reference</a> 
     </div> 
     <!-- end #quote --> 
-    <!-- start #services --> 
+    <!-- start #services  
     <div id="services" class="clearfix"> 
       <div class="left"> 
         <div class="first help"> 
@@ -52,5 +52,6 @@
         </div> 
       </div> 
     </div> 
+	-->
     <!-- end #services -->
 <!-- END you can remove this -->
