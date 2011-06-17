@@ -16,7 +16,7 @@
   <script src="web/js/app.js"></script>
   <script>require('main');</script>
   
-<script type="text/javascript">
+	<script type="text/javascript">
 
     google.load("feeds", "1");
 
@@ -41,8 +41,18 @@
     }
     google.setOnLoadCallback(initialize);
 
-    </script>
-  
+	if (location.host === 'html5love.com') {
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1255327-29']);
+		_gaq.push(['_trackPageview', location.pathname + location.hash + location.search]);
+		
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	}
+	</script> 
 
 <body>
 <!-- start #header -->
