@@ -3,7 +3,12 @@
 	<title>Local Storage Example</title>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
-	
+	<link rel="stylesheet" href="../bootstrap.min.css">
+	<style>
+		#content a{
+			margin-right: 50px;
+		}
+	</style>
 	<script type='text/javascript'>
 	$(function(){
 		
@@ -11,8 +16,8 @@
 			$('#content').html('This browser does not support localStorage');
 			return;	
 		}
-			
-		saveData = function(){
+		
+		var saveData = function(){
 			var myObj = {
 				 one 	: 'yes'
 				,two	: 'no'
@@ -23,12 +28,12 @@
 			localStorage.setItem('objStorage', JSON.stringify(myObj));
 		}
 		
-		getData = function(){
+		var getData = function(){
 			returnObj = JSON.parse(localStorage.getItem('objStorage'));
 			console.log(returnObj);
 		}
 		
-		removeData = function(){
+		var removeData = function(){
 			localStorage.removeItem('objStorage');	
 		}
 		
@@ -42,6 +47,34 @@
 		//localStorage['bar'] = 'foo';
 		//var a = localStorage['bar'];
 		
+		/*
+		var originalSync = Backbone.sync;
+		
+		Backbone.sync = function(method, model, success, error){
+			var url = model.url();
+			
+			var newSuccess = function(response, status, xhr){
+			    if(xhr.statusText === "success" && typeof response != 'undefined' && typeof response.data === "object"){
+					try {
+						localStorage.setItem(url, JSON.stringify(response));
+					} catch (e) {};		
+		        }
+		        return success(response);
+		    };
+		    
+			try {
+				if (method === 'read') {
+					var returnJSON = JSON.parse(localStorage.getItem(url));
+					if (returnJSON) return success(returnJSON);
+				}
+			} 
+			catch (e) {
+				//console.log(e);
+			}
+					
+			return originalSync(method, model, newSuccess, error);	
+		};
+		*/
 	});
 	</script>
 	

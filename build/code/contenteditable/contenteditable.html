@@ -2,10 +2,14 @@
 <head>
 	<title>Content Editable</title>
 	<style>
+		#content{
+			margin: 25px;
+		}
 		[contenteditable]:hover {
 	  		outline: 1px dotted #ccc;
 		}
 	</Style>
+	<link rel="stylesheet" href="../bootstrap.min.css">
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
 	<!--[if lt IE 9]>
@@ -15,23 +19,22 @@
 	<script type='text/javascript'>
 	$(function(){
 		
-		if (!Modernizr.localstorage){
-			$('#content').html('This browser does not support localStorage');
-			return;	
-		}
+		if (!Modernizr.localstorage) {
 		
-		localStorage.setItem('defaultValue', $('#editable').html());				
 		
-		if (localStorage.getItem('contenteditable')) {
-			$('#editable').html(localStorage.getItem('contenteditable'));
-		} else {
+			localStorage.setItem('defaultValue', $('#editable').html());
+			
+			if (localStorage.getItem('contenteditable')) {
+				$('#editable').html(localStorage.getItem('contenteditable'));
+			}
+			else {
 			// fire the ajax
+			}
+			
+			$('#editable').blur(function(){
+				localStorage.setItem('contenteditable', $(this).html());
+			})
 		}
-		
-		$('#editable').blur(function(){
-			localStorage.setItem('contenteditable', $(this).html());
-		})
-		
 		$('#clear').click(function(){
 			$('#editable').html(localStorage.getItem('defaultValue'));
 			localStorage.setItem('contenteditable', localStorage.getItem('defaultValue'));
@@ -61,7 +64,7 @@
 	        </ol>
 	    </section>
 	    <div>
-	        <input type="button" id="clear" value="Clear changes" />
+	    	<a href="##" id="clear" class='btn primary'>Clear Changes</a>
 	    </div> 
 		
 	</div>
