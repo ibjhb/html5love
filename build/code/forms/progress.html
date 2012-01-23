@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<title>Form Progress Example</title>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="../js/underscore-min.js"></script>
+	
+	<script type='text/javascript'>
+	$(function(){
+		
+		if (!Modernizr.input.placeholder){
+			//$('#content').prepend('This browser does not support input.placeholder <br /><br />');
+			//return;	
+		}
+		
+		var count = _.range(11);
+		_(count).each(function(i){
+			_.delay(function(){
+				$('#progressBar').val(i);
+			}, 1000 * i);
+		});
+		
+	});
+	</script>
+	
+</head>
+<body>
+	<div id="content">
+		
+		<form> 
+			<progress value="0" max="10" id='progressBar'>
+			
+			<br />
+			
+			<input type="submit" value="Search">
+		</form>
+		
+	</div>
+</body>
+</html>
