@@ -10362,6 +10362,7 @@ window.jQuery = window.$ = jQuery;
       "!/:page": "showPage"
     };
     MainController.prototype.initialize = function() {
+      //this.bind('all', this.updateDisqus);
       return this.bind('all', this.updateMenu);
     };
     MainController.prototype.home = function() {
@@ -10376,6 +10377,18 @@ window.jQuery = window.$ = jQuery;
       $menu = $('#menu li');
       $menu.removeClass('current-menu-item');
       findclass = _.isUndefined(page) ? route.split(':')[1] : page;
+      return $menu.find('.' + findclass).parent().addClass('current-menu-item');
+    };
+	MainController.prototype.updateDisqus = function(route, page) {
+      if (typeof DISQUS === 'undefined') return;
+      DISQUS.reset({
+            reload: true,
+            config: function () {  
+                  this.page.identifier = route + page;  
+                  this.page.url = "http://html5love.com/#!/" + page;
+            }
+      });
+
       return $menu.find('.' + findclass).parent().addClass('current-menu-item');
     };
     return MainController;
