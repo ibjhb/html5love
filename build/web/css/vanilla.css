@@ -189,7 +189,7 @@ input.error, textarea.error, .contacterror{
 *   Section:      Content
 *   Description:  Container of content for the site
 */
-#content{
+#content, .content{
   width: 960px;
   margin: 0 auto;
   background: #fff;
@@ -197,6 +197,15 @@ input.error, textarea.error, .contacterror{
 }
 
 
+.content_disqus{
+	padding: 20px;
+	background: none repeat scroll 0 0 #FEFEFE;
+	width: 920px;
+}
+
+#disqus_thread{
+	margin-bottom: 0px !important;
+}
 
 /*
 *   Section:      Splash
@@ -633,7 +642,7 @@ code.code{
   background: #f1f1f1 url("../img/code_bg.gif") repeat 0 0;
   padding: 20px 10px;
 }
-#main.page{
+#main.page, .page{
   background: #fefefe;
   padding: 50px 40px 80px;
 }
