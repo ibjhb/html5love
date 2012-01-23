@@ -8,7 +8,7 @@
 	$(function(){
 		
 		if (!Modernizr.video){
-		$('#content').html('This browser does not support html5 video');
+			$('#content').html('This browser does not support html5 video');
 			return;	
 		}
 		
@@ -20,6 +20,11 @@
 			$('#player')[0].pause();
 		})
 		
+		$('#player').bind("timeupdate", function() {
+			var _player = this;
+			$('#currentTime').html(_player.currentTime);				
+		});	
+				
 	});
 	</script>
 </head>
@@ -45,6 +50,9 @@
 		
 		<div id="playVideo">Play</div>
 		<div id="stopVideo">Stop</div>
+		
+		<div id="currentTime"></div>
+		
 	</div>
 </body>
 </html>
